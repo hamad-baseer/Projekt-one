@@ -1,0 +1,28 @@
+C:\Users\Admin>cd C:\Program Files\MySQL\MySQL Server 8.0\bin
+
+
+
+update sdata set result = 'P' where (math>=50 and sci>=50 and eng>=50);
+update sdata set result = 'F' where (math<50 or sci<50 or eng<50);
+
+select * from sdata;
+select * from sdata where result = 'P';
+select * from sdata where result = 'P' and tmarks<180;
+
+desc sdata;
+
+insert into sdata (admno, name, class, sec, roll no) values (null,'haseeb', 'x', 'a', 3);
+create table sdata (adm noint(3), not null primary key, name varchar(15), class char(4), sec char(1));
+insert into sdata values (101, "kaleem", "x", "b");
+("does not leave column empty")
+create table sdata (adm noint(3),unique, name varchar(15), class char(4), sec char(1));
+insert into sdata values (101, "kaleem", "x", "b");
+("does not take duplicate entry")
+
+update sdata set admno =110 where admno =102 and name 
+
+alter table sdata modify admno int(3) primary key;
+alter table sdata drop PRIMARY KEY;
+
+alter table sdata modify admno int(3);
+("to remove a Not Null value")

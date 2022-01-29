@@ -1,0 +1,40 @@
+#kivy 2.0.0
+<LoginScreen>:
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 1
+            label:
+                text: "User Log in"
+            TextInput:
+                hint_text: "Enter username"
+            TextInput:
+                hint_text: "Enter password"
+            Button:
+                text: "log in"
+
+        GridLayout:
+            cols: 2
+            Button:
+                text: "Forgot password?"
+            Button:
+                text: "Sign up"
+                on_press: root.sign_up()
+
+<SignUpScreen>
+    GridLayout:
+            cols: 1
+            label:
+                text: "Sign up for your first ever gaming platform"
+            TextInput:
+                hint_text: "Enter username"
+            TextInput:
+                hint_text: "Enter password"
+            Button:
+                text: "reset password"
+
+<RootWidget>:
+    LoginScreen:
+        name: "login_Screen"
+    SignUpScreen:
+        name: "sign_up_screen"
